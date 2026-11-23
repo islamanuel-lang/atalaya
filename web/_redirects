@@ -1,0 +1,11 @@
+/comprobar /check 301
+/articulos /articulos/ 301
+
+# Rutas antiguas con .html
+/check.html /check 301
+/estado.html /estado 301
+/privacidad.html /privacidad 301
+/quien-esta-detras.html /quien-esta-detras 301
+/aviso-legal.html /aviso-legal 301
+
+/* /404.html 404

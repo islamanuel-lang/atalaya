@@ -78,17 +78,17 @@ const SYMBOL = {
   bitcoin: 'BTC', solana: 'SOL', tron: 'TRX'
 };
 
-export async function balancesFor(addresses) {
+export async function balancesFor(addresses, env = process.env) {
   const table = await prices();
   const jobs = addresses.map(async ({ chain, address }) => {
     try {
       let amount = 0;
-      if (chain === 'ethereum') amount = await evmBalance(process.env.RPC_ETH || 'https://cloudflare-eth.com', address);
-      else if (chain === 'bsc') amount = await evmBalance(process.env.RPC_BSC || 'https://bsc-dataseed.binance.org', address);
-      else if (chain === 'polygon') amount = await evmBalance(process.env.RPC_POLYGON || 'https://polygon-rpc.com', address);
-      else if (chain === 'bitcoin') amount = await btcBalance(process.env.RPC_BTC || 'https://blockstream.info/api', address);
-      else if (chain === 'solana') amount = await solBalance(process.env.RPC_SOL || 'https://api.mainnet-beta.solana.com', address);
-      else if (chain === 'tron') amount = await tronBalance(process.env.RPC_TRON || 'https://api.trongrid.io', address);
+      if (chain === 'ethereum') amount = await evmBalance(env.RPC_ETH || 'https://cloudflare-eth.com', address);
+      else if (chain === 'bsc') amount = await evmBalance(env.RPC_BSC || 'https://bsc-dataseed.binance.org', address);
+      else if (chain === 'polygon') amount = await evmBalance(env.RPC_POLYGON || 'https://polygon-rpc.com', address);
+      else if (chain === 'bitcoin') amount = await btcBalance(env.RPC_BTC || 'https://blockstream.info/api', address);
+      else if (chain === 'solana') amount = await solBalance(env.RPC_SOL || 'https://api.mainnet-beta.solana.com', address);
+      else if (chain === 'tron') amount = await tronBalance(env.RPC_TRON || 'https://api.trongrid.io', address);
 
       if (!Number.isFinite(amount) || amount <= 0) return null;
       const price = table[chain] ?? 0;

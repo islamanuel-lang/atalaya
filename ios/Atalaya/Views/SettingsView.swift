@@ -61,6 +61,30 @@ struct SettingsView: View {
                 Button("Ver log") { model.screen = .log }
                     .buttonStyle(GhostButtonStyle())
 
+                Link(destination: AppConfig.telegram) {
+                    HStack {
+                        Text("Canal de Telegram")
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                    }
+                    .font(.system(size: 15))
+                    .foregroundStyle(DS.text)
+                    .padding(14)
+                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(DS.line))
+                }
+
+                Link(destination: AppConfig.site) {
+                    HStack {
+                        Text("Web y estado de versiones")
+                        Spacer()
+                        Image(systemName: "arrow.up.right")
+                    }
+                    .font(.system(size: 15))
+                    .foregroundStyle(DS.text)
+                    .padding(14)
+                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(DS.line))
+                }
+
                 Button("Nueva auditoría") { model.resetFlow() }
                     .buttonStyle(GhostButtonStyle())
 

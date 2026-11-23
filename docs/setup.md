@@ -40,8 +40,8 @@ npm run build
 npm run serve
 ```
 
-El build inyecta API, TestFlight y APK en el HTML y en `app.js`. Publica el
-resultado en Cloudflare Pages o GitHub Pages (workflow `web.yml`).
+El build inyecta API, TestFlight, APK y canal en el HTML y en `app.js`. Para
+producción sigue `deploy-gratis.md` (Pages) o el workflow `deploy-free.yml`.
 
 ## iOS
 
@@ -65,6 +65,9 @@ manual que necesita estos secretos:
 - `BUILD_CERTIFICATE_BASE64`, `P12_PASSWORD` (certificado de distribución)
 - `PROVISIONING_PROFILE_BASE64` (perfil con el App Group)
 - `APPSTORE_KEY_ID`, `APPSTORE_ISSUER_ID`, `APPSTORE_KEY` (API key)
+
+También puedes compilar sin Mac con `ios.yml` y firmar luego en Windows con
+Impactor (ver abajo).
 
 ### Instalación en dispositivo
 

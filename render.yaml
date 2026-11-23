@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: atalaya-api
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm ci && npm --prefix backend ci
+    startCommand: node backend/src/server.js
+    healthCheckPath: /v1/health
+    envVars:
+      - key: ORIGINS
+        value: https://atalaya.pages.dev,http://localhost:5173
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: ALERT_USD
+        value: "25"
+      - key: RETENTION_DAYS
+        value: "365"
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT
+        sync: false

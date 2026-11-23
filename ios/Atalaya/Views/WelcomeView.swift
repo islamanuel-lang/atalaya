@@ -34,6 +34,18 @@ struct WelcomeView: View {
                 Button("Cómo funciona") { showHow = true }
                     .buttonStyle(GhostButtonStyle())
 
+                Link(destination: AppConfig.telegram) {
+                    HStack(spacing: 8) {
+                        Image(systemName: "paperplane")
+                        Text("Canal de Telegram")
+                    }
+                    .font(.system(size: 16, weight: .medium))
+                    .foregroundStyle(DS.text)
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical, 14)
+                    .overlay(RoundedRectangle(cornerRadius: 14).stroke(DS.line))
+                }
+
                 HStack(spacing: 8) {
                     Circle()
                         .fill(model.group == nil ? DS.warn : DS.signal)

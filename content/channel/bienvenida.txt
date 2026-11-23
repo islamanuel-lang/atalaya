@@ -1,0 +1,15 @@
+Bienvenido a Atalaya.
+
+Aquí comprobamos si tu frase semilla está expuesta y revisamos si vive en fotos
+o archivos de tu iPhone.
+
+Tres cosas antes de empezar:
+
+1. No pides permiso a nadie: la app no firma y no custodia fondos.
+2. No te pediremos la semilla por privado. Nunca.
+3. Si dudas, comprueba primero con una wallet vacía.
+
+Fijado: cómo funciona y preguntas frecuentes.
+Soporte: grupo del canal.
+
+👉 atalaya.pages.dev/?s=tg

@@ -40,6 +40,7 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL }}
           TESTFLIGHT_URL: ${{ vars.TESTFLIGHT_URL }}
           APK_URL: ${{ vars.APK_URL }}
+          TELEGRAM_URL: ${{ vars.TELEGRAM_URL }}
       - name: Limpiar fuentes y dependencias del artefacto
         working-directory: web
         run: rm -rf node_modules src .env package.json package-lock.json build.mjs

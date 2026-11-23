@@ -41,6 +41,9 @@ web/aviso-legal/
 web/sitemap.xml
 web/robots.txt
 web/assets/bip39.txt
+worker/src/shared/
+worker/.wrangler/
+wtest/
 
 # Sistema
 .DS_Store
@@ -53,3 +56,4 @@ Thumbs.db
 *.mobileprovision
 *.p8
 AuthKey_*.p8
+worker/src/shared/

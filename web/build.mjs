@@ -11,6 +11,7 @@ const API_BASE = process.env.API_BASE || 'http://localhost:8787';
 const SITE_URL = (process.env.SITE_URL || 'http://localhost:5173').replace(/\/$/, '');
 const TESTFLIGHT = process.env.TESTFLIGHT_URL || 'https://testflight.apple.com/join/REEMPLAZA';
 const APK = process.env.APK_URL || '/atalaya.apk';
+const TELEGRAM = process.env.TELEGRAM_URL || 'https://t.me/atalaya';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -35,6 +36,7 @@ function layout({ title, description, body, canonical, kind = 'page' }) {
         <a href="/check">Comprobar</a>
         <a href="/articulos/">Artículos</a>
         <a href="/estado">Estado</a>
+        <a href="${TELEGRAM}" target="_blank" rel="noopener">Canal</a>
         <a class="cta" href="/check">Auditar</a>
       </nav>
     </header>`;
@@ -48,6 +50,7 @@ function layout({ title, description, body, canonical, kind = 'page' }) {
         <a href="/quien-esta-detras">Quién está detrás</a>
         <a href="/privacidad">Privacidad</a>
         <a href="/aviso-legal">Aviso legal</a>
+        <a href="${TELEGRAM}" target="_blank" rel="noopener">Telegram</a>
         <a href="mailto:hola@atalaya.es">hola@atalaya.es</a>
       </div>
     </footer>`;
@@ -176,6 +179,7 @@ function substitute(source) {
     .replaceAll('__TESTFLIGHT__', TESTFLIGHT)
     .replaceAll('__APK__', APK)
     .replaceAll('__SITE__', SITE_URL)
+    .replaceAll('__TELEGRAM__', TELEGRAM)
     .replace('<!--ARTICLES-->', cards);
 }
 

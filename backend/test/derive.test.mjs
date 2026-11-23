@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { deriveAll, isValid, normalizePhrase } from '../src/derive.js';
+import { deriveAll, isValid, normalizePhrase } from '../../shared/derive.js';
 
 const PHRASE = 'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about';
 

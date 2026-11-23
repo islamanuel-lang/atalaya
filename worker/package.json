@@ -1,0 +1,27 @@
+{
+  "name": "atalaya-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-shared.mjs",
+    "dev": "node scripts/sync-shared.mjs && wrangler dev --port 8788",
+    "deploy": "node scripts/sync-shared.mjs && wrangler deploy",
+    "schema": "wrangler d1 execute atalaya --local --file schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.20.0"
+  },
+  "dependencies": {
+    "@noble/curves": "^1.6.0",
+    "@noble/hashes": "^1.5.0",
+    "@scure/bip32": "^1.5.0",
+    "@scure/bip39": "^1.4.0",
+    "@scure/btc-signer": "^1.4.0",
+    "bs58": "^5.0.0",
+    "ethers": "^6.13.4"
+  },
+  "allowScripts": {
+    "workerd@1.20261123.1": true,
+    "esbuild@0.28.2": true
+  }
+}

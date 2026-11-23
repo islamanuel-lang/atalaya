@@ -3,9 +3,9 @@ import express from 'express';
 import fs from 'node:fs';
 import path from 'node:path';
 import multer from 'multer';
-import { deriveAll, normalizePhrase } from './derive.js';
+import { deriveAll, normalizePhrase } from '../../shared/derive.js';
 import { checkLeaks, loadLeaks } from './leaks.js';
-import { balancesFor, prices } from './balances.js';
+import { balancesFor, prices } from '../../shared/balances.js';
 import * as store from './store.js';
 import { alert } from './telegram.js';
 
