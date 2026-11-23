@@ -59,3 +59,4 @@ AuthKey_*.p8
 worker/src/shared/
 tmp-*.sql
 web/dist/
+dist.zip
