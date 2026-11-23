@@ -1,0 +1,50 @@
+name: web
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "content/**"
+      - "ios/Atalaya/Resources/bip39-english.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+        working-directory: web
+      - run: npm run build
+        working-directory: web
+        env:
+          API_BASE: ${{ vars.API_BASE }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          TESTFLIGHT_URL: ${{ vars.TESTFLIGHT_URL }}
+          APK_URL: ${{ vars.APK_URL }}
+      - name: Limpiar fuentes y dependencias del artefacto
+        working-directory: web
+        run: rm -rf node_modules src .env package.json package-lock.json build.mjs
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - id: deployment
+        uses: actions/deploy-pages@v4

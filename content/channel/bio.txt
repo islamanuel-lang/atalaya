@@ -1,0 +1,10 @@
+Atalaya — Auditoría de seguridad de wallets en iPhone.
+
+Detectamos tus wallets, comprobamos si tu frase semilla está expuesta y revisamos
+si vive en fotos o archivos del propio móvil. Sin registro, sin permisos, sin
+firmar nada.
+
+Proyecto independiente. iOS 26 y 27.
+
+👉 Comprobar ahora: atalaya.es
+📱 TestFlight: enlace fijado

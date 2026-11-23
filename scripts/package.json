@@ -1,0 +1,7 @@
+{
+  "name": "atalaya-icons",
+  "private": true,
+  "type": "module",
+  "scripts": { "icons": "node make-icons.mjs" },
+  "dependencies": { "sharp": "^0.33.5" }
+}

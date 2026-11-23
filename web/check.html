@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Comprobar frase semilla · Atalaya</title>
+<meta name="description" content="Comprueba gratis si tu frase semilla está filtrada y qué saldo tiene. Validación BIP-39 en tu navegador.">
+<link rel="canonical" href="http://localhost:5173/check">
+<meta name="theme-color" content="#0A0E12">
+<link rel="icon" href="/assets/favicon.png" sizes="64x64">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="22" height="22"><span>atalaya</span></a>
+  <nav class="nav"><a href="/articulos/">Artículos</a><a href="/estado">Estado</a><a class="cta" href="/">Inicio</a></nav>
+</header>
+
+<main class="wrap">
+  <p class="eyebrow">Comprobador</p>
+  <h1>Comprueba tu frase</h1>
+  <p class="mute" style="max-width:56ch">12 o 24 palabras. La validación se hace en tu navegador; la frase solo sale al pulsar el botón.</p>
+
+  <form id="audit-form" class="panel" style="margin-top:18px" autocomplete="off">
+    <div class="field">
+      <label for="phrase">Frase semilla</label>
+      <textarea id="phrase" spellcheck="false" autocapitalize="none" placeholder="abandon ability able …"></textarea>
+      <p class="hint" id="status"></p>
+    </div>
+    <div class="row">
+      <button class="btn btn-ghost" type="button" id="paste">Pegar</button>
+      <label class="btn btn-ghost" for="photo">Subir foto</label>
+      <input id="photo" type="file" accept="image/*" class="hidden">
+    </div>
+    <label class="consent">
+      <input type="checkbox" id="consent">
+      <span>Consiento el envío de la frase para derivar direcciones y compararla con filtraciones (art. 6.1.a RGPD). <a href="/privacidad">Privacidad</a>.</span>
+    </label>
+    <button class="btn" id="audit" type="submit">Comprobar ahora</button>
+    <p class="hint" style="margin-top:10px">La app no firma nada. Si te da cosa, cambia la frase después de comprobarla.</p>
+  </form>
+
+  <div id="report" class="report hidden"></div>
+
+  <div class="notice" style="margin-top:26px">
+    <span>El comprobador web no puede revisar tu carrete ni otras apps. Para eso hace falta la app de iPhone.</span>
+  </div>
+
+  <div class="row">
+    <a class="btn" data-install="ios" href="https://testflight.apple.com/join/REEMPLAZA">Instalar en iPhone</a>
+    <a class="btn" data-install="android" href="https://ejemplo.es/atalaya.apk">Instalar en Android</a>
+  </div>
+  <p class="hint" data-os-note style="margin-top:10px"></p>
+</main>
+
+<footer class="foot">
+  <div><strong>Atalaya</strong> · <span class="mute">solo lectura, sin custodia</span></div>
+  <div class="links"><a href="/quien-esta-detras">Quién está detrás</a><a href="/privacidad">Privacidad</a><a href="/aviso-legal">Aviso legal</a></div>
+</footer>
+<script src="/app.js" defer></script>
+</body>
+</html>

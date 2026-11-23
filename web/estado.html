@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estado de la técnica por versión de iOS · Atalaya</title>
+<meta name="description" content="Qué versiones están afectadas por el escape de sandbox, cuáles están parcheadas y qué se puede hacer en cada una.">
+<link rel="canonical" href="http://localhost:5173/estado">
+<meta property="og:title" content="Estado de la técnica por versión de iOS · Atalaya">
+<meta property="og:description" content="Qué versiones están afectadas por el escape de sandbox, cuáles están parcheadas y qué se puede hacer en cada una.">
+<meta property="og:image" content="http://localhost:5173/assets/og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0E12">
+<link rel="icon" href="/assets/favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <header class="bar">
+      <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="22" height="22"><span>atalaya</span></a>
+      <nav class="nav">
+        <a href="/check">Comprobar</a>
+        <a href="/articulos/">Artículos</a>
+        <a href="/estado">Estado</a>
+        <a class="cta" href="/check">Auditar</a>
+      </nav>
+    </header>
+<main class="wrap"><article class="prose"><p class="eyebrow">ATALAYA</p><h1>Estado por versión de iOS</h1>
+<p>Actualizado el 23 de noviembre de 2026. Esta página se revisa con cada versión.</p>
+<table>
+<thead>
+<tr>
+<th>Versión</th>
+<th>Lectura de contenedores</th>
+<th>Auditoría en línea</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iOS 18.x</td>
+<td>No (usa otra técnica)</td>
+<td>Sí</td>
+<td>Fuera de alcance de Atalaya iOS</td>
+</tr>
+<tr>
+<td>iOS 26.0 – 26.7.2</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Sin datos de sistema</td>
+</tr>
+<tr>
+<td>iOS 27.0 – 27.2.1</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Sistema y grupos incluidos</td>
+</tr>
+<tr>
+<td>iOS 27.3 beta 1</td>
+<td>Sí</td>
+<td>Sí</td>
+<td>Última beta vulnerable</td>
+</tr>
+<tr>
+<td>iOS 27.3 beta 2+</td>
+<td><strong>No</strong></td>
+<td>Sí</td>
+<td>Parcheado por Apple</td>
+</tr>
+</tbody></table>
+<h2>Qué implica</h2>
+<p>En versiones parcheadas, Atalaya sigue comprobando filtraciones, direcciones y
+saldos, pero ya no puede abrir carpetas de otras apps. La detección de wallets
+instaladas se mantiene.</p>
+<h2>Cómo saber tu versión</h2>
+<p>Ajustes → General → Información → Versión de iOS.</p>
+<h2>Criterio</h2>
+<p>Si estás en 26.0–27.2.1, no hay prisa por actualizar por este fallo en concreto;
+valora el resto de parches de seguridad. Si estás en 27.3 beta 2 o superior, ya
+estás protegido y la app funciona en modo auditoría.</p>
+<p>Fuente primaria: <code>github.com/forcequitOS/worse_query</code> y notas de Apple del 9 de
+noviembre de 2026.</p>
+</article></main>
+
+    <footer class="foot">
+      <div>
+        <strong>Atalaya</strong> · proyecto independiente de seguridad para iPhone.<br>
+        <span class="mute">No es una wallet, no custodia fondos, no firma nada.</span>
+      </div>
+      <div class="links">
+        <a href="/quien-esta-detras">Quién está detrás</a>
+        <a href="/privacidad">Privacidad</a>
+        <a href="/aviso-legal">Aviso legal</a>
+        <a href="mailto:hola@atalaya.es">hola@atalaya.es</a>
+      </div>
+    </footer>
+<script src="/app.js" defer></script>
+</body>
+</html>

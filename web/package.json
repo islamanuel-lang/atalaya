@@ -1,0 +1,13 @@
+{
+  "name": "atalaya-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "npx --yes serve -l 5173 ."
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "marked": "^14.1.3"
+  }
+}

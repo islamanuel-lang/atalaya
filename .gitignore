@@ -1,0 +1,54 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Backend
+backend/.env
+web/.env
+backend/data/*
+!backend/data/.gitkeep
+backend/uploads/
+backend/data/files/
+
+# iOS
+ios/build/
+ios/DerivedData/
+*.ipa
+*.dSYM.zip
+*.xcuserstate
+ios/Atalaya.xcodeproj/
+
+# Android
+android/.gradle/
+android/local.properties
+android/**/build/
+*.apk
+*.aab
+
+# Web
+web/_site/
+web/.env
+web/node_modules/
+web/index.html
+web/app.js
+web/check/
+web/articulos/
+web/estado/
+web/privacidad/
+web/quien-esta-detras/
+web/aviso-legal/
+web/sitemap.xml
+web/robots.txt
+web/assets/bip39.txt
+
+# Sistema
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Secretos
+*.p12
+*.mobileprovision
+*.p8
+AuthKey_*.p8

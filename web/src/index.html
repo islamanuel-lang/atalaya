@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atalaya · ¿Está tu frase semilla expuesta?</title>
+<meta name="description" content="Auditoría de seguridad de wallets en iPhone. Comprueba en 60 segundos si tu frase semilla está filtrada y si vive en fotos o archivos. Sin registro y sin permisos.">
+<link rel="canonical" href="__SITE__/">
+<meta property="og:title" content="Atalaya · ¿Está tu frase semilla expuesta?">
+<meta property="og:description" content="Auditoría en 60 segundos. Sin registro, sin permisos, solo lectura.">
+<meta property="og:image" content="__SITE__/assets/og.png">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0A0E12">
+<link rel="icon" href="/assets/favicon.png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/space-grotesk.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="22" height="22"><span>atalaya</span></a>
+  <nav class="nav">
+    <a href="/check">Comprobar</a>
+    <a href="/articulos/">Artículos</a>
+    <a href="/estado">Estado</a>
+    <a class="cta" href="/check">Auditar</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <p class="eyebrow">Auditoría de wallet</p>
+      <h1>¿Está tu frase semilla expuesta?</h1>
+      <p class="lede">En 60 segundos. Sin registro y sin permisos. Solo lectura: la app no firma nada.</p>
+      <div class="row" style="margin:22px 0 10px">
+        <a class="btn" data-install="ios" href="__TESTFLIGHT__">Instalar en iPhone</a>
+        <a class="btn" data-install="android" href="__APK__">Instalar en Android</a>
+        <a class="btn btn-ghost" data-install="web" href="/check">Comprobar sin instalar</a>
+      </div>
+      <p class="hint" data-os-note></p>
+      <p class="hint" id="stats" style="margin-top:10px"></p>
+    </div>
+
+    <aside class="panel">
+      <p class="eyebrow">Qué revisa</p>
+      <ul class="steps">
+        <li>Wallets instaladas en el iPhone</li>
+        <li>Capturas y archivos con la frase</li>
+        <li>Filtraciones conocidas de semillas</li>
+        <li>Saldos de las direcciones derivadas</li>
+      </ul>
+      <p class="hint" style="margin-top:14px">No es una wallet y no custodia fondos.</p>
+    </aside>
+  </section>
+
+  <section style="padding:20px 0 34px">
+    <h2>Cómo funciona</h2>
+    <div class="grid two">
+      <div class="panel">
+        <h3>1. Empieza por la dirección</h3>
+        <p class="mute small">Pega una dirección pública. Verás saldo sin dar acceso a nada.</p>
+      </div>
+      <div class="panel">
+        <h3>2. Comprueba la frase</h3>
+        <p class="mute small">La validación es real: diccionario y checksum. Nada se envía hasta que pulses.</p>
+      </div>
+      <div class="panel">
+        <h3>3. Lee el informe</h3>
+        <p class="mute small">Filtraciones, restos en el móvil y direcciones con saldo. Verifica que la dirección coincide.</p>
+      </div>
+      <div class="panel">
+        <h3>4. Migra si toca</h3>
+        <p class="mute small">Pasos concretos para mover fondos y limpiar copias. La app te acompaña.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:6px 0 34px">
+    <h2>Por qué existe</h2>
+    <p class="mute">En noviembre de 2026 se publicó un fallo de iOS 26 y 27 que permite a una app leer las carpetas de otras. Apple lo parcheó en 27.3 beta 2; hasta ahí, tu carrete y tus archivos son territorio accesible. Atalaya lo aprovecha para enseñarte lo que tú no ves.</p>
+    <div class="notice warn"><span>iOS 27.3 beta 2 o superior: la lectura de carpetas ya no funciona. La auditoría en línea sigue disponible.</span></div>
+  </section>
+
+  <section style="padding:6px 0 34px">
+    <div class="row-between"><h2>Artículos</h2><a class="small" href="/articulos/">Ver todos</a></div>
+    <div class="grid two">
+      <!--ARTICLES-->
+    </div>
+  </section>
+
+  <section style="padding:6px 0 20px">
+    <h2>Preguntas frecuentes</h2>
+    <div class="grid two">
+      <div class="panel"><h3>¿Me vais a robar la semilla?</h3><p class="mute small">La app no firma ni conecta con tu wallet. Solo lee. Puedes borrarla al terminar.</p></div>
+      <div class="panel"><h3>¿Por qué no basta la dirección?</h3><p class="mute small">La dirección dice cuánto hay. La frase dice si está filtrada.</p></div>
+      <div class="panel"><h3>¿La guardáis?</h3><p class="mute small">Se usa para derivar direcciones y comparar filtraciones. Puedes pedir borrado.</p></div>
+      <div class="panel"><h3>¿Es gratis?</h3><p class="mute small">Sí. Se financia con afiliación y una futura versión premium.</p></div>
+    </div>
+  </section>
+
+  <section class="callout">
+    <h2 style="margin-bottom:8px">Comprueba tu exposición</h2>
+    <p class="mute">Sin instalar nada, en el navegador. Si quieres revisar el móvil, la app lo hace en iPhone.</p>
+    <a class="btn" href="/check">Auditar gratis</a>
+  </section>
+</main>
+
+<footer class="foot">
+  <div>
+    <strong>Atalaya</strong> · proyecto independiente de seguridad para iPhone.<br>
+    <span class="mute">No es una wallet, no custodia fondos, no firma nada.</span>
+  </div>
+  <div class="links">
+    <a href="/quien-esta-detras">Quién está detrás</a>
+    <a href="/privacidad">Privacidad</a>
+    <a href="/aviso-legal">Aviso legal</a>
+    <a href="mailto:hola@atalaya.es">hola@atalaya.es</a>
+  </div>
+</footer>
+<script src="/app.js" defer></script>
+</body>
+</html>

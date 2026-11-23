@@ -1,0 +1,50 @@
+name: Atalaya
+options:
+  bundleIdPrefix: es.atalaya
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    TARGETED_DEVICE_FAMILY: "1"
+    SUPPORTS_MACCATALYST: "NO"
+targets:
+  Atalaya:
+    type: application
+    platform: iOS
+    sources:
+      - path: Atalaya
+        excludes:
+          - Resources/Info.plist
+    info:
+      path: Atalaya/Resources/Info.plist
+      properties:
+        CFBundleDisplayName: Atalaya
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        UILaunchScreen: {}
+        NSPhotoLibraryUsageDescription: Atalaya lee una foto con la frase semilla. Nada se sube hasta que audites.
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        UIRequiresFullScreen: true
+        ITSAppUsesNonExemptEncryption: false
+        LSApplicationQueriesSchemes: [metamask, phantom, trust, exodus]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: es.atalaya.app
+        CODE_SIGN_ENTITLEMENTS: Atalaya/Resources/Atalaya.entitlements
+        SWIFT_OBJC_BRIDGING_HEADER: Atalaya/Resources/Bridging-Header.h
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ENABLE_USER_SCRIPT_SANDBOXING: YES
+schemes:
+  Atalaya:
+    build:
+      targets:
+        Atalaya: all
+    run:
+      config: Debug

