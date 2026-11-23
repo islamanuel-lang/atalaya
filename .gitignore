@@ -57,3 +57,4 @@ Thumbs.db
 *.p8
 AuthKey_*.p8
 worker/src/shared/
+tmp-*.sql
