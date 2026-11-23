@@ -87,6 +87,37 @@ async function handle(request, env) {
 
   if (route === 'GET /v1/health') return out({ ok: true });
 
+  if (route === 'GET /v1/debug/balance') {
+    const address = url.searchParams.get('address') || 'bc1qcr8te4kr609gcawutmrza0j4xv80jy8z306fyu';
+    const chain = url.searchParams.get('chain') || 'bitcoin';
+    try {
+      const rpc = await fetch('https://api.mainnet-beta.solana.com', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'getBalance', params: [address] }),
+        signal: AbortSignal.timeout(8000)
+      });
+      const rpcBody = await rpc.text();
+      const b = await balancesFor([{ chain, address }], env);
+      return out({ status: rpc.status, body: rpcBody.slice(0, 200), balances: b });
+    } catch (error) {
+      return out({ error: error.name + ': ' + error.message });
+    }
+  }
+
+  if (route === 'GET /v1/debug') {
+    const attempts = [];
+    for (const url of ['https://blockstream.info/api/blocks/tip/height', 'https://cloudflare-eth.com']) {
+      try {
+        const res = await fetch(url, { signal: AbortSignal.timeout ? AbortSignal.timeout(6000) : undefined });
+        attempts.push({ url, status: res.status, text: (await res.text()).slice(0, 80) });
+      } catch (error) {
+        attempts.push({ url, error: error.name + ': ' + error.message });
+      }
+    }
+    return out({ attempts, hasTimeout: typeof AbortSignal.timeout });
+  }
+
   if (route === 'GET /v1/stats') {
     const row = await env.DB.prepare(`
       SELECT

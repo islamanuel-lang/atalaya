@@ -65,9 +65,11 @@ while read h; do echo "INSERT OR IGNORE INTO leaks (hash) VALUES ('$h');"; done 
 npx wrangler d1 execute atalaya --remote --file leaks.sql
 ```
 
-Nota: el runtime de `wrangler dev` en Windows de este equipo se reinicia tras la
-primera petición. El código de derivación y saldos funciona dentro de workerd;
-si te pasa, prueba `wrangler dev --remote` o usa Render.
+Nota para Windows: con npm 11 los postinstaladores vienen bloqueados. Si
+`wrangler dev` arranca pero las peticiones se cuelgan, ejecuta
+`npm install-scripts approve workerd esbuild && npm rebuild workerd esbuild`.
+Los primeros segundos tras un cambio pueden fallar por recarga en caliente.
+El Worker se ha probado en local con D1: derivación, saldo y aviso.
 
 ## 4. Enlaces del canal
 

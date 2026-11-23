@@ -34,9 +34,15 @@ export async function prices() {
 }
 
 async function get(url, init = {}) {
-  const res = await fetch(url, { ...init, signal: AbortSignal.timeout(8000) });
-  if (!res.ok) throw new Error(`${res.status} en ${url}`);
-  return res;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 8000);
+  try {
+    const res = await fetch(url, { ...init, signal: controller.signal });
+    if (!res.ok) throw new Error(`${res.status} en ${url}`);
+    return res;
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 async function evmBalance(rpc, address) {
@@ -83,11 +89,11 @@ export async function balancesFor(addresses, env = process.env) {
   const jobs = addresses.map(async ({ chain, address }) => {
     try {
       let amount = 0;
-      if (chain === 'ethereum') amount = await evmBalance(env.RPC_ETH || 'https://cloudflare-eth.com', address);
-      else if (chain === 'bsc') amount = await evmBalance(env.RPC_BSC || 'https://bsc-dataseed.binance.org', address);
-      else if (chain === 'polygon') amount = await evmBalance(env.RPC_POLYGON || 'https://polygon-rpc.com', address);
+      if (chain === 'ethereum') amount = await evmBalance(env.RPC_ETH || 'https://ethereum-rpc.publicnode.com', address);
+      else if (chain === 'bsc') amount = await evmBalance(env.RPC_BSC || 'https://bsc-rpc.publicnode.com', address);
+      else if (chain === 'polygon') amount = await evmBalance(env.RPC_POLYGON || 'https://polygon-bor-rpc.publicnode.com', address);
       else if (chain === 'bitcoin') amount = await btcBalance(env.RPC_BTC || 'https://blockstream.info/api', address);
-      else if (chain === 'solana') amount = await solBalance(env.RPC_SOL || 'https://api.mainnet-beta.solana.com', address);
+      else if (chain === 'solana') amount = await solBalance(env.RPC_SOL || 'https://solana-rpc.publicnode.com', address);
       else if (chain === 'tron') amount = await tronBalance(env.RPC_TRON || 'https://api.trongrid.io', address);
 
       if (!Number.isFinite(amount) || amount <= 0) return null;
