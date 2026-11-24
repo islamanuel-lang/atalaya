@@ -3,12 +3,12 @@ title: Estado de la técnica por versión de iOS
 description: Qué versiones están afectadas por el escape de sandbox, cuáles están parcheadas y qué se puede hacer en cada una.
 slug: estado
 kind: page
-updated: 2026-11-23
+updated: 2026-11-24
 ---
 
 # Estado por versión de iOS
 
-Actualizado el 23 de noviembre de 2026. Esta página se revisa con cada versión.
+Actualizado el 24 de noviembre de 2026. Esta página se revisa con cada versión.
 
 | Versión | Lectura de contenedores | Auditoría en línea | Nota |
 |---|---|---|---|
@@ -18,11 +18,12 @@ Actualizado el 23 de noviembre de 2026. Esta página se revisa con cada versión
 | iOS 27.3 beta 1 | Sí | Sí | Última beta vulnerable |
 | iOS 27.3 beta 2+ | **No** | Sí | Parcheado por Apple |
 
-## Qué implica
+## Qué cambia al actualizar
 
-En versiones parcheadas, SemenCheck sigue comprobando filtraciones, direcciones y
-saldos, pero ya no puede abrir carpetas de otras apps. La detección de wallets
-instaladas se mantiene.
+En versiones parcheadas el escape deja de funcionar: SemenCheck ya no puede abrir
+carpetas de otras apps ni revisar restos. Se mantiene la comprobación en línea
+(filtraciones, direcciones y saldos) y la detección de wallets instaladas, que no
+depende del escape.
 
 ## Cómo saber tu versión
 
