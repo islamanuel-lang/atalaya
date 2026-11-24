@@ -20,10 +20,10 @@ Actualizado el 24 de noviembre de 2026. Esta página se revisa con cada versión
 
 ## Qué cambia al actualizar
 
-En versiones parcheadas el escape deja de funcionar: SemenCheck ya no puede abrir
-carpetas de otras apps ni revisar restos. Se mantiene la comprobación en línea
-(filtraciones, direcciones y saldos) y la detección de wallets instaladas, que no
-depende del escape.
+En versiones parcheadas, `worse_query` ya no consigue permiso de lectura:
+SemenCheck no puede abrir carpetas de otras apps ni revisar restos. Se mantiene
+la comprobación en línea (filtraciones, direcciones y saldos) y la detección de
+wallets instaladas, que no depende del escape.
 
 ## Cómo saber tu versión
 
