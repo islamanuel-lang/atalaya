@@ -1,6 +1,6 @@
 ---
 title: Aviso legal
-description: Condiciones de uso de Atalaya.
+description: Condiciones de uso de SemenCheck.
 slug: aviso-legal
 kind: page
 ---
@@ -9,12 +9,12 @@ kind: page
 
 ## Titular
 
-Proyecto independiente *Atalaya*, contactable en hola@atalaya.es. Mientras no
+Proyecto independiente *SemenCheck*, contactable en hola@semencheck.es. Mientras no
 haya alta fiscal, actúa como proyecto personal.
 
 ## Objeto
 
-Atalaya ofrece una comprobación informativa del estado de exposición de frases
+SemenCheck ofrece una comprobación informativa del estado de exposición de frases
 semilla y de los restos que dejan en el dispositivo. El resultado no es una
 auditoría profesional ni una garantía.
 
@@ -26,7 +26,7 @@ auditoría profesional ni una garantía.
 
 ## Responsabilidad
 
-Atalaya no custodia fondos ni firma transacciones. Un riesgo bajo en el informe
+SemenCheck no custodia fondos ni firma transacciones. Un riesgo bajo en el informe
 no implica seguridad absoluta. La migración de fondos es responsabilidad del
 usuario.
 

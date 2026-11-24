@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Atalaya</title>
+<title>SemenCheck</title>
 <style>
   :root { --ink:#0A0E12; --surface:#121821; --line:#22303F; --text:#E8EDF2; --mute:#93A1B0; --signal:#2ED47A; --warn:#F5A524; --risk:#F04438; }
   * { box-sizing:border-box; }
@@ -32,7 +32,7 @@
 <body>
 <header>
   <svg viewBox="0 0 512 512" fill="none" stroke="#2ED47A" stroke-width="26" stroke-linecap="round"><path d="M146 400h220"/><path d="M176 400 206 232h100l30 168"/><path d="M206 232 132 150"/><path d="M306 232 380 150"/><path d="M256 232v168"/></svg>
-  atalaya
+  semencheck
 </header>
 <main>
   <p class="eyebrow">Android</p>
@@ -58,15 +58,15 @@
 
   <div class="panel" style="margin-top:18px">
     <p class="eyebrow">API</p>
-    <input id="api" placeholder="https://api.atalaya.es">
+    <input id="api" placeholder="https://api.semencheck.es">
     <button class="btn ghost" id="save">Guardar</button>
   </div>
 
-  <p class="hint">Atalaya · proyecto independiente · solo lectura · <a href="https://t.me/atalaya">canal</a></p>
+  <p class="hint">SemenCheck · proyecto independiente · solo lectura · <a href="https://t.me/semencheck">canal</a></p>
 </main>
 <script>
 const $ = (s) => document.querySelector(s);
-let api = localStorage.getItem('api') || 'https://api.atalaya.es';
+let api = localStorage.getItem('api') || 'https://api.semencheck.es';
 let install = localStorage.getItem('install');
 if (!install) { install = crypto.randomUUID(); localStorage.setItem('install', install); }
 $('#api').value = api;

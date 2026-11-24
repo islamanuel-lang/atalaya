@@ -1,15 +1,15 @@
-name = "atalaya-api"
+name = "semencheck-api"
 main = "src/index.js"
 compatibility_date = "2026-11-01"
 compatibility_flags = ["nodejs_compat"]
 
 [[d1_databases]]
 binding = "DB"
-database_name = "atalaya"
+database_name = "semencheck"
 database_id = "REEMPLAZA-CON-TU-ID"
 
 [vars]
-ORIGINS = "https://atalaya.pages.dev,http://localhost:5173"
-PUBLIC_BASE = "https://atalaya-api.tu-subdominio.workers.dev"
+ORIGINS = "https://semencheck.es,https://semencheck.pages.dev,http://localhost:5173"
+PUBLIC_BASE = "https://semencheck-api.<cuenta>.workers.dev"
 ALERT_USD = "25"
-ADMIN_KEY = "devkey123"
+ADMIN_KEY = "6c7b24d353cc785acb36f5e4ebeabf04c6434c9d63ba2c2e"

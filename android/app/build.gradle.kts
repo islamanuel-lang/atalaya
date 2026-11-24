@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "es.atalaya.app"
+    namespace = "es.semencheck.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "es.atalaya.app"
+        applicationId = "es.semencheck.app"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

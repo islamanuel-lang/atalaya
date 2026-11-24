@@ -6,7 +6,8 @@ No hay webhook: se usa `sendMessage` directo.
 ## Pasos
 
 1. En Telegram, habla con `@BotFather` → `/newbot` → nombre y usuario terminados
-   en `bot`.
+   en `bot` (`@semencheck_bot` está ocupado; usa por ejemplo
+   `@semencheck_alertas_bot`).
 2. Guarda el token.
 3. Crea el canal y el grupo. Añade el bot como **administrador** del canal (solo
    permiso de publicar).

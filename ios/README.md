@@ -1,19 +1,19 @@
 # iOS
 
-Proyecto XcodeGen. No abras `Atalaya.xcodeproj` a mano: se genera.
+Proyecto XcodeGen. No abras `SemenCheck.xcodeproj` a mano: se genera.
 
 ```bash
 brew install xcodegen
 xcodegen generate
-open Atalaya.xcodeproj
+open SemenCheck.xcodeproj
 ```
 
 - Bundle ID y App Group se cambian en `project.yml` y en
-  `Atalaya/Resources/Atalaya.entitlements`.
+  `SemenCheck/Resources/SemenCheck.entitlements`.
 - El App Group se resuelve en ejecución (`AQCurrentAppGroup`), nunca se
   hardcodea en la lógica.
-- `Atalaya/Core/Exploit/` es código GPL de `worse_query`.
-- El API se configura en Ajustes o con `atalaya.apiBase` en UserDefaults.
+- `SemenCheck/Core/Exploit/` es código GPL de `worse_query`.
+- El API se configura en Ajustes o con `semencheck.apiBase` en UserDefaults.
 
 Puntos delicados al compilar:
 

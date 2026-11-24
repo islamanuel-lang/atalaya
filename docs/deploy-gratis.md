@@ -1,13 +1,19 @@
-# Despliegue gratis, sin dominio
+# Despliegue de coste mínimo
 
-Arquitectura de coste cero:
+Arquitectura:
 
-- **Web**: Cloudflare Pages (`atalaya.pages.dev`), HTTPS y CDN gratis.
-- **API**: Render free (`atalaya-api.onrender.com`) con el mismo servidor que
+- **Web**: Cloudflare Pages (dominio `semencheck.es`), HTTPS y CDN gratis.
+- **API**: Render free (`semencheck-api.onrender.com`) con el mismo servidor que
   usas en local.
 - **Avisos**: bot de Telegram.
 
-Sin tarjeta, sin dominio, sin Mac.
+Sin Mac. Único coste: el dominio.
+
+## 0. Dominio
+
+Compra `semencheck.es` antes de publicar nada y añade `semencheck.app` como
+reserva (301 al `.es`). El correo (`hola@`, `security@`) va al `.es`. El `.com`
+está parkeado en GoDaddy: se negocia más adelante, no bloquea el lanzamiento.
 
 ## 1. API en Render
 
@@ -16,6 +22,10 @@ Sin tarjeta, sin dominio, sin Mac.
 3. Rellena los secretos que pide (Telegram) y guarda el `ADMIN_KEY` generado.
 4. Espera el despliegue y comprueba `https://<servicio>/v1/health`.
 5. Si el plan free duerme por inactividad, el primer acceso tarda ~30 s.
+
+El servicio actual responde en `https://atalaya-keie.onrender.com`; al renombrarlo
+en Render pasará a `semencheck-api.onrender.com`, así que actualiza `API_BASE` y
+`docs/estado.md` ese mismo día.
 
 Límites del plan free: se duerme tras 15 min, disco efímero (los JSONL se
 pierden en cada reinicio). Para un MVP vale; cuando haya volumen, plan de 7 $ con
@@ -26,11 +36,11 @@ disco o migra a VPS.
 ```bash
 cd web
 cp .env.example .env
-# API_BASE=https://atalaya-api.onrender.com
-# TELEGRAM_URL=https://t.me/atalaya
+# API_BASE=https://semencheck-api.onrender.com
+# TELEGRAM_URL=https://t.me/semencheck
 npm install
-npm run build
-npx wrangler pages deploy . --project-name=atalaya
+npm run pack
+npx wrangler pages deploy dist --project-name=semencheck
 ```
 
 Primera vez: `npx wrangler login` (navegador) o usa el workflow
@@ -38,7 +48,9 @@ Primera vez: `npx wrangler login` (navegador) o usa el workflow
 `CLOUDFLARE_ACCOUNT_ID` y las variables `API_BASE`, `SITE_URL`, `TELEGRAM_URL`,
 `TESTFLIGHT_URL`, `APK_URL`, `PAGES_PROJECT`.
 
-Ajusta `web/_headers` y `worker/wrangler.toml` con el subdominio real.
+El build necesita `SITE_URL=https://semencheck.es`: si se deja el valor por
+defecto, los canonical y el sitemap apuntan a otro sitio. Ajusta `web/_headers` y
+`worker/wrangler.toml` con el subdominio real.
 
 ## 3. Alternativa: API en Worker + D1
 
@@ -49,9 +61,9 @@ vive en un runtime distinto.
 cd worker
 npm install
 npx wrangler login
-npx wrangler d1 create atalaya          # copia el id a wrangler.toml
+npx wrangler d1 create semencheck          # copia el id a wrangler.toml
 npm run sync
-npx wrangler d1 execute atalaya --remote --file schema.sql
+npx wrangler d1 execute semencheck --remote --file schema.sql
 npx wrangler secret put ADMIN_KEY
 npx wrangler secret put TELEGRAM_TOKEN
 npx wrangler secret put TELEGRAM_CHAT
@@ -62,7 +74,7 @@ Carga las filtraciones:
 
 ```bash
 while read h; do echo "INSERT OR IGNORE INTO leaks (hash) VALUES ('$h');"; done < backend/data/leaks.txt > leaks.sql
-npx wrangler d1 execute atalaya --remote --file leaks.sql
+npx wrangler d1 execute semencheck --remote --file leaks.sql
 ```
 
 Nota para Windows: con npm 11 los postinstaladores vienen bloqueados. Si
@@ -73,7 +85,7 @@ El Worker se ha probado en local con D1: derivación, saldo y aviso.
 
 ## 4. Enlaces del canal
 
-Publica el enlace con atribución: `https://atalaya.pages.dev/?s=tg&c=1`.
+Publica el enlace con atribución: `https://semencheck.es/?s=tg&c=1`.
 Cambia `s` por cada fuente (foro, canal, X) para saber qué convierte.
 
 ## 5. Coste real y siguiente paso
@@ -83,7 +95,8 @@ Cambia `s` por cada fuente (foro, canal, X) para saber qué convierte.
 | Pages | 0 € |
 | Render free | 0 € |
 | Worker + D1 (opcional) | 0 € |
-| Dominio `.es` | ~12 €/año (fase 2) |
+| Dominio `.es` + `.app` | ~25 €/año |
 
-Cuando haya 100 instalaciones: compra `atalaya.es`, apunta Pages y la API a ese
-dominio, 301 desde `pages.dev` y actualiza `ORIGINS` y `_headers`.
+Apunta Pages y la API al `.es` desde el principio, con 301 desde `pages.dev`, y
+mantén `ORIGINS` y `_headers` con el dominio exacto. El `.com` se negocia aparte
+si aparece a buen precio.

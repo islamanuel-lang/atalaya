@@ -1,4 +1,4 @@
-Bienvenido a Atalaya.
+Bienvenido a SemenCheck.
 
 Aquí comprobamos si tu frase semilla está expuesta y revisamos si vive en fotos
 o archivos de tu iPhone.
@@ -12,4 +12,4 @@ Tres cosas antes de empezar:
 Fijado: cómo funciona y preguntas frecuentes.
 Soporte: grupo del canal.
 
-👉 atalaya.pages.dev/?s=tg
+👉 semencheck.es/?s=tg

@@ -1,4 +1,4 @@
-# Atalaya — dirección visual
+# SemenCheck — dirección visual
 
 Proyecto independiente de seguridad. Sobrio, técnico, oscuro. Un acento, sin
 degradados ni 3D.
@@ -24,8 +24,8 @@ degradados ni 3D.
 
 ## Logo
 
-Wordmark `atalaya` en minúsculas + monograma `a`. Marca secundaria: torre de
-tres trazos con haz. Nunca escudo ni llave.
+Wordmark `SemenCheck`: «semen» en tinta y «Check» en señal. Marca secundaria: torre
+de tres trazos con haz. Nunca escudo ni llave.
 
 ## Icono
 

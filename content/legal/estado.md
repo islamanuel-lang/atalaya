@@ -12,7 +12,7 @@ Actualizado el 23 de noviembre de 2026. Esta página se revisa con cada versión
 
 | Versión | Lectura de contenedores | Auditoría en línea | Nota |
 |---|---|---|---|
-| iOS 18.x | No (usa otra técnica) | Sí | Fuera de alcance de Atalaya iOS |
+| iOS 18.x | No (usa otra técnica) | Sí | Fuera de alcance de SemenCheck iOS |
 | iOS 26.0 – 26.7.2 | Sí | Sí | Sin datos de sistema |
 | iOS 27.0 – 27.2.1 | Sí | Sí | Sistema y grupos incluidos |
 | iOS 27.3 beta 1 | Sí | Sí | Última beta vulnerable |
@@ -20,7 +20,7 @@ Actualizado el 23 de noviembre de 2026. Esta página se revisa con cada versión
 
 ## Qué implica
 
-En versiones parcheadas, Atalaya sigue comprobando filtraciones, direcciones y
+En versiones parcheadas, SemenCheck sigue comprobando filtraciones, direcciones y
 saldos, pero ya no puede abrir carpetas de otras apps. La detección de wallets
 instaladas se mantiene.
 

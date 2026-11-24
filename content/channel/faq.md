@@ -10,7 +10,7 @@ distintas y la segunda es la que importa.
 
 **¿La guardáis?**
 Se usa para derivar direcciones y compararla con filtraciones. No la usamos para
-firmar. Puedes pedir su borrado cuando quieras: hola@atalaya.es.
+firmar. Puedes pedir su borrado cuando quieras: hola@semencheck.es.
 
 **¿Por qué es gratis?**
 Enlaces de afiliado a exchanges y, más adelante, una versión premium de

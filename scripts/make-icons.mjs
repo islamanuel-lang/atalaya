@@ -13,7 +13,7 @@ async function png(svg, size, destination) {
   console.log(path.relative(root, destination));
 }
 
-await png(icon, 1024, path.join(root, 'ios/Atalaya/Resources/Assets.xcassets/AppIcon.appiconset/icon-1024.png'));
+await png(icon, 1024, path.join(root, 'ios/SemenCheck/Resources/Assets.xcassets/AppIcon.appiconset/icon-1024.png'));
 await png(icon, 1024, path.join(root, 'brand', 'icon-1024.png'));
 await png(icon, 512, path.join(root, 'web/assets/icon-512.png'));
 await png(icon, 192, path.join(root, 'web/assets/icon-192.png'));

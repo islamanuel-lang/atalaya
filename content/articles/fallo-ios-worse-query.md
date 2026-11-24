@@ -44,7 +44,7 @@ carrete, un `.txt` en Archivos, una nota copiada. Ahí no hay Keychain que valga
 son ficheros planos que el escape sí lee.
 
 Las wallets que guardan la semilla en el llavero del sistema (la mayoría) no
-quedan al descubierto por sí solas. Por eso Atalaya combina comprobación de
+quedan al descubierto por sí solas. Por eso SemenCheck combina comprobación de
 filtraciones con revisión de restos en el móvil.
 
 ## Cómo comprobar si estás expuesto

@@ -21,6 +21,6 @@ jobs:
         working-directory: android
       - uses: actions/upload-artifact@v4
         with:
-          name: Atalaya-apk
+          name: SemenCheck-apk
           path: android/app/build/outputs/apk/debug/*.apk
           if-no-files-found: error

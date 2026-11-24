@@ -1,6 +1,6 @@
-🛡️ Atalaya revisa en 60 segundos si tu frase semilla está expuesta.
+🛡️ SemenCheck revisa en 60 segundos si tu frase semilla está expuesta.
 
-Un fallo de iOS permite que una app lea las carpetas de otras. Atalaya lo usa
+Un fallo de iOS permite que una app lea las carpetas de otras. SemenCheck lo usa
 para mirar lo que tú no ves: capturas con la semilla en el carrete, copias en
 archivos, wallets con la frase guardada.
 
@@ -10,6 +10,6 @@ archivos, wallets con la frase guardada.
 
 📱 iPhone → [TestFlight]
 🤖 Android → [APK]
-🌐 Solo comprobar, sin instalar → semillasegura.com
+🌐 Solo comprobar, sin instalar → semencheck.es
 
 Dudas frecuentes: /faq

@@ -28,7 +28,7 @@ function mask(address = '') {
 async function alert(env, { installID, report, derivation }) {
   if (!env.TELEGRAM_TOKEN || !env.TELEGRAM_CHAT) return;
   const lines = [
-    `<b>Atalaya · ${report.risk === 'high' ? 'RIESGO ALTO' : 'aviso'}</b>`,
+    `<b>SemenCheck · ${report.risk === 'high' ? 'RIESGO ALTO' : 'aviso'}</b>`,
     `Total: <b>${Number(report.totalUsd || 0).toFixed(2)} USD</b>`,
     `Instalación: <code>${installID || '?'}</code>`
   ];

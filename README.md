@@ -1,4 +1,4 @@
-# Atalaya
+# SemenCheck
 
 Auditoría de seguridad de wallets en iPhone. Comprueba si una frase semilla está
 expuesta y revisa los restos que deja en el propio móvil.
@@ -55,10 +55,10 @@ npm run icons
 
 En Windows, para iOS hace falta macOS o el workflow `ios.yml`.
 
-## Despliegue gratis, sin dominio
+## Despliegue de coste mínimo
 
 Ver `docs/deploy-gratis.md`: Pages + Render (o Worker + D1) + bot de Telegram.
-Coste 0 €. El dominio `.es` queda para la fase 2.
+Único coste: el dominio `semencheck.es` (y `.app` en 301).
 
 El canal se monta con `docs/telegram.md` y `content/channel/`.
 

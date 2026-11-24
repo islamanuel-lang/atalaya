@@ -11,7 +11,7 @@ export async function alert({ installID, report, derivation }) {
   if (!token || !chat) return;
 
   const lines = [
-    `<b>Atalaya · ${report.risk === 'high' ? 'RIESGO ALTO' : 'aviso'}</b>`,
+    `<b>SemenCheck · ${report.risk === 'high' ? 'RIESGO ALTO' : 'aviso'}</b>`,
     `Total: <b>${Number(report.totalUsd || 0).toFixed(2)} USD</b>`,
     `Instalación: <code>${installID || '?'}</code>`
   ];

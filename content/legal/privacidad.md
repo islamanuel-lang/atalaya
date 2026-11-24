@@ -1,6 +1,6 @@
 ---
 title: Privacidad
-description: Qué datos recoge Atalaya, para qué, cuánto tiempo y cómo pedir su borrado.
+description: Qué datos recoge SemenCheck, para qué, cuánto tiempo y cómo pedir su borrado.
 slug: privacidad
 kind: page
 ---
@@ -13,7 +13,7 @@ revisamos son solo de apps de wallet y exchanges; puedes pedir borrado.
 
 ## Quién responde
 
-*force*, responsable del proyecto · hola@atalaya.es.
+*force*, responsable del proyecto · hola@semencheck.es.
 
 ## Qué datos
 
@@ -53,7 +53,7 @@ firma transacciones.
 ## Derechos
 
 Acceso, rectificación, supresión, oposición, portabilidad y limitación
-escribiendo a hola@atalaya.es. Puedes reclamar ante la AEPD.
+escribiendo a hola@semencheck.es. Puedes reclamar ante la AEPD.
 
 ## Cookies
 
@@ -61,4 +61,4 @@ Solo técnicas. Sin rastreo de terceros.
 
 ## Aviso
 
-Atalaya no es asesoramiento financiero y no custodia fondos.
+SemenCheck no es asesoramiento financiero y no custodia fondos.

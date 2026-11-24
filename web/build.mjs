@@ -10,8 +10,8 @@ const CONTENT = path.join(ROOT, 'content');
 const API_BASE = process.env.API_BASE || 'http://localhost:8787';
 const SITE_URL = (process.env.SITE_URL || 'http://localhost:5173').replace(/\/$/, '');
 const TESTFLIGHT = process.env.TESTFLIGHT_URL || 'https://testflight.apple.com/join/REEMPLAZA';
-const APK = process.env.APK_URL || '/atalaya.apk';
-const TELEGRAM = process.env.TELEGRAM_URL || 'https://t.me/atalaya';
+const APK = process.env.APK_URL || '/semencheck.apk';
+const TELEGRAM = process.env.TELEGRAM_URL || 'https://t.me/semencheck';
 
 marked.setOptions({ gfm: true, breaks: false });
 
@@ -31,7 +31,7 @@ function frontmatter(source) {
 function layout({ title, description, body, canonical, kind = 'page' }) {
   const nav = `
     <header class="bar">
-      <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="22" height="22"><span>atalaya</span></a>
+      <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="22" height="22"><span>semencheck</span></a>
       <nav class="nav">
         <a href="/check">Comprobar</a>
         <a href="/articulos/">Artículos</a>
@@ -43,7 +43,7 @@ function layout({ title, description, body, canonical, kind = 'page' }) {
   const footer = `
     <footer class="foot">
       <div>
-        <strong>Atalaya</strong> · proyecto independiente de seguridad para iPhone.<br>
+        <strong>SemenCheck</strong> · proyecto independiente de seguridad para iPhone.<br>
         <span class="mute">No es una wallet, no custodia fondos, no firma nada.</span>
       </div>
       <div class="links">
@@ -51,7 +51,7 @@ function layout({ title, description, body, canonical, kind = 'page' }) {
         <a href="/privacidad">Privacidad</a>
         <a href="/aviso-legal">Aviso legal</a>
         <a href="${TELEGRAM}" target="_blank" rel="noopener">Telegram</a>
-        <a href="mailto:hola@atalaya.es">hola@atalaya.es</a>
+        <a href="mailto:hola@semencheck.es">hola@semencheck.es</a>
       </div>
     </footer>`;
   return `<!doctype html>
@@ -98,9 +98,9 @@ function renderPage(file) {
   const slug = data.slug || path.basename(file, '.md');
   const html = marked.parse(body);
   const out = layout({
-    title: `${data.title} · Atalaya`,
+    title: `${data.title} · SemenCheck`,
     description: data.description,
-    body: `<article class="prose"><p class="eyebrow">${esc((data.tag || 'Atalaya').toUpperCase())}</p>${html}</article>`,
+    body: `<article class="prose"><p class="eyebrow">${esc((data.tag || 'SemenCheck').toUpperCase())}</p>${html}</article>`,
     canonical: `/${slug}`,
     kind: data.kind === 'article' ? 'article' : 'page'
   });
@@ -125,7 +125,7 @@ for (const name of fs.readdirSync(path.join(CONTENT, 'articles'))) {
     description: data.description || excerpt
   });
   const out = layout({
-    title: `${data.title} · Atalaya`,
+    title: `${data.title} · SemenCheck`,
     description: data.description || excerpt,
     body: `<article class="prose">
       <p class="eyebrow">${esc((data.tag || '').toUpperCase())} · ${esc(data.date || '')}</p>
@@ -159,7 +159,7 @@ const list = articles.map((a) => `
   </li>`).join('');
 
 fs.writeFileSync(path.join(HERE, 'articulos', 'index.html'), layout({
-  title: 'Artículos · Atalaya',
+  title: 'Artículos · SemenCheck',
   description: 'Guías y avisos sobre semillas filtradas, drenadores y el fallo de sandbox de iOS.',
   body: `<p class="eyebrow">BIBLIOTECA</p><h1>Artículos</h1><ul class="list">${list}</ul>`,
   canonical: '/articulos/'
@@ -198,7 +198,7 @@ if (fs.existsSync(scriptSrc)) {
 }
 
 // Wordlist para validar en cliente
-const wordlist = path.join(ROOT, 'ios', 'Atalaya', 'Resources', 'bip39-english.txt');
+const wordlist = path.join(ROOT, 'ios', 'SemenCheck', 'Resources', 'bip39-english.txt');
 if (fs.existsSync(wordlist)) fs.copyFileSync(wordlist, path.join(HERE, 'assets', 'bip39.txt'));
 
 // Sitemap y robots

@@ -89,6 +89,7 @@ p { margin: 0 0 14px; }
   color: var(--text);
 }
 .brand:hover { text-decoration: none; }
+.brand em { font-style: normal; color: var(--signal); }
 .nav { margin-left: auto; display: flex; align-items: center; gap: 18px; font-size: 14px; }
 .nav a { color: var(--mute); }
 .nav a:hover { color: var(--text); text-decoration: none; }

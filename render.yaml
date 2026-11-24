@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: atalaya-api
+    name: semencheck-api
     runtime: node
     plan: free
     region: frankfurt
@@ -9,7 +9,7 @@ services:
     healthCheckPath: /v1/health
     envVars:
       - key: ORIGINS
-        value: https://atalaya.pages.dev,http://localhost:5173
+        value: https://semencheck.es,https://semencheck.pages.dev,http://localhost:5173
       - key: ADMIN_KEY
         generateValue: true
       - key: ALERT_USD

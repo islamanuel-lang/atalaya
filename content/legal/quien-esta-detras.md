@@ -1,13 +1,13 @@
 ---
-title: Quién está detrás de Atalaya
+title: Quién está detrás de SemenCheck
 description: Proyecto independiente de seguridad para iPhone. Quién lo lleva, por qué existe, cómo se financia y qué no hace.
 slug: quien-esta-detras
 kind: page
 ---
 
-# Quién está detrás de Atalaya
+# Quién está detrás de SemenCheck
 
-Atalaya es un proyecto independiente de seguridad para iPhone, llevado por una
+SemenCheck es un proyecto independiente de seguridad para iPhone, llevado por una
 sola persona con nombre público —puedes llamarme **force**— que lleva años en el
 mundillo de las wallets y la seguridad móvil.
 
@@ -15,7 +15,7 @@ mundillo de las wallets y la seguridad móvil.
 
 En noviembre de 2026 se hizo público un fallo de iOS que permite a una app leer
 las carpetas de otras. No había una herramienta sencilla para que el usuario
-comprobara si su frase estaba expuesta. Eso es Atalaya: comprobar, avisar y
+comprobara si su frase estaba expuesta. Eso es SemenCheck: comprobar, avisar y
 poner remedio.
 
 ## Cómo gana dinero
@@ -44,4 +44,4 @@ pieza.
 
 ## Contacto
 
-hola@atalaya.es · menos de 48 h laborables · seguridad: security@atalaya.es
+hola@semencheck.es · menos de 48 h laborables · seguridad: security@semencheck.es

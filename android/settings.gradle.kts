@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Atalaya"
+rootProject.name = "SemenCheck"
 include(":app")

@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" role="img" aria-label="Plantilla de caso">
   <rect width="1200" height="675" fill="#0A0E12"/>
   <rect x="40" y="40" width="1120" height="595" fill="#121821" stroke="#22303F" stroke-width="2" rx="24"/>
-  <text x="80" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="22" fill="#93A1B0" letter-spacing="3">CASO · ATALAYA</text>
+  <text x="80" y="110" font-family="Inter, Segoe UI, sans-serif" font-size="22" fill="#93A1B0" letter-spacing="3">CASO · SEMENCHECK</text>
   <text x="80" y="220" font-family="Space Grotesk, Inter, sans-serif" font-size="52" font-weight="700" fill="#E8EDF2">Wallet con semilla en el carrete</text>
   <text x="80" y="300" font-family="JetBrains Mono, Consolas, monospace" font-size="34" fill="#2ED47A">0x8f4a…9c3a</text>
   <text x="80" y="370" font-family="Inter, Segoe UI, sans-serif" font-size="28" fill="#93A1B0">3 filtraciones · 1 captura · 42,10 USD</text>
@@ -9,5 +9,5 @@
     <path d="M146 400h220"/>
     <path d="M176 400 206 232h100l30 168"/>
   </g>
-  <text x="80" y="600" font-family="Inter, Segoe UI, sans-serif" font-size="22" fill="#93A1B0">Fecha y hora · atalaya.es</text>
+  <text x="80" y="600" font-family="Inter, Segoe UI, sans-serif" font-size="22" fill="#93A1B0">Fecha y hora · semencheck.es</text>
 </svg>

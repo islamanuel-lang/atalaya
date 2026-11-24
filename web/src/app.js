@@ -83,10 +83,10 @@ async function validate(text) {
 
 /* Flujo del comprobador */
 function installID() {
-  let id = localStorage.getItem("atalaya.install");
+  let id = localStorage.getItem("semencheck.install");
   if (!id) {
     id = crypto.randomUUID();
-    localStorage.setItem("atalaya.install", id);
+    localStorage.setItem("semencheck.install", id);
   }
   return id;
 }

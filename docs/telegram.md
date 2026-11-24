@@ -2,19 +2,20 @@
 
 ## Creación (15 minutos)
 
-1. Telegram → menú → *Nuevo canal* → nombre **Atalaya**.
+1. Telegram → menú → *Nuevo canal* → nombre **SemenCheck**.
 2. Descripción: la de `content/channel/bio.txt`.
 3. Foto: `brand/icon-1024.png`.
-4. Usuario: `@atalaya` (respaldo `@atalayaapp`).
+4. Usuario: `@semencheck` (respaldo `@semencheckapp`).
 5. Canal **público**. Los privados no se pueden descubrir ni compartir por enlace.
 6. Añade el canal a tu bio de X y a la web (`TELEGRAM_URL`).
-7. Crea el grupo de soporte `@atalaya_support`, con modo lento de 30 s y las
+7. Crea el grupo de soporte `@semencheck_support`, con modo lento de 30 s y las
    reglas fijadas.
 8. Añade el bot de avisos solo al canal privado de alertas, nunca al público.
 
 ## Primeros ajustes
 
 - Fijado: `content/channel/pinned.txt`.
+- Primera mención en el canal, con la aclaración: «Semen viene de semilla».
 - Mensaje de bienvenida del grupo: `content/channel/bienvenida.txt`.
 - Reglas: `content/channel/reglas.md`.
 - Publica los 10 posts de `posts-iniciales/` durante la primera semana, uno al

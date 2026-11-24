@@ -4,11 +4,11 @@
 
 | Sitio | Valor de ejemplo | Cámbialo por |
 |---|---|---|
-| `ios/project.yml` | `PRODUCT_BUNDLE_IDENTIFIER: es.atalaya.app` | Tu bundle ID |
-| `ios/Atalaya/Resources/Atalaya.entitlements` | `group.es.atalaya.app` | Un App Group tuyo |
-| Ajustes de la app | `https://api.atalaya.es` | Tu API |
+| `ios/project.yml` | `PRODUCT_BUNDLE_IDENTIFIER: es.semencheck.app` | Tu bundle ID |
+| `ios/SemenCheck/Resources/SemenCheck.entitlements` | `group.es.semencheck.app` | Un App Group tuyo |
+| Ajustes de la app | `https://api.semencheck.es` | Tu API (hoy `https://atalaya-keie.onrender.com` hasta que exista el dominio) |
 | `web/.env` | `__TESTFLIGHT__`, `__APK__` | Tus enlaces reales |
-| `android/app/build.gradle.kts` | `es.atalaya.app` | Tu applicationId |
+| `android/app/build.gradle.kts` | `es.semencheck.app` | Tu applicationId |
 
 La app lee el App Group de los entitlements en tiempo de ejecución, así que da
 igual el nombre: solo tiene que existir y estar autorizado en el perfil.
@@ -51,7 +51,7 @@ producción sigue `deploy-gratis.md` (Pages) o el workflow `deploy-free.yml`.
 brew install xcodegen
 cd ios
 xcodegen generate
-open Atalaya.xcodeproj
+open SemenCheck.xcodeproj
 ```
 
 En Xcode: equipo en *Signing & Capabilities*, App Group activo, dispositivo

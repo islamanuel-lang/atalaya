@@ -2,11 +2,11 @@
 
 ## worse_query
 
-`ios/Atalaya/Core/Exploit/` contiene código de
+`ios/SemenCheck/Core/Exploit/` contiene código de
 [worse_query](https://github.com/forcequitOS/worse_query), Copyright (C) 2026
 Taj C (forcequit), publicado bajo GPL-3.0-or-later.
 
-Modificaciones de Atalaya:
+Modificaciones de SemenCheck:
 
 - Resolución dinámica del App Group (`SecTaskCopyValueForEntitlement`).
 - Comprobación de versión y de paths soportados antes de consumir el token.
@@ -16,7 +16,7 @@ Modificaciones de Atalaya:
 
 La técnica de escape de sandbox, la enumeración por inodos
 (`fsgetpath`) y los flags de `containermanagerd` son obra de forcequit.
-`Atalaya` no reclama autoría sobre ellos.
+`SemenCheck` no reclama autoría sobre ellos.
 
 ## Terceros
 

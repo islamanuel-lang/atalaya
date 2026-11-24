@@ -1,12 +1,12 @@
 {
-  "name": "atalaya-worker",
+  "name": "semencheck-worker",
   "private": true,
   "type": "module",
   "scripts": {
     "sync": "node scripts/sync-shared.mjs",
     "dev": "node scripts/sync-shared.mjs && wrangler dev --port 8788",
     "deploy": "node scripts/sync-shared.mjs && wrangler deploy",
-    "schema": "wrangler d1 execute atalaya --local --file schema.sql"
+    "schema": "wrangler d1 execute semencheck --local --file schema.sql"
   },
   "devDependencies": {
     "wrangler": "^4.20.0"

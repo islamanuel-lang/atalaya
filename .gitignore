@@ -17,7 +17,7 @@ ios/DerivedData/
 *.ipa
 *.dSYM.zip
 *.xcuserstate
-ios/Atalaya.xcodeproj/
+ios/SemenCheck.xcodeproj/
 
 # Android
 android/.gradle/

@@ -10,10 +10,10 @@
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
-        android:label="Atalaya"
+        android:label="SemenCheck"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Atalaya"
+        android:theme="@style/Theme.SemenCheck"
         android:usesCleartextTraffic="true">
 
         <activity

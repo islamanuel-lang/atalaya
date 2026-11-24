@@ -258,6 +258,6 @@ app.use((err, _req, res, _next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Atalaya API en ${PUBLIC_BASE} (puerto ${PORT})`);
+  console.log(`SemenCheck API en ${PUBLIC_BASE} (puerto ${PORT})`);
   prices().then((p) => console.log('Precios:', p)).catch(() => {});
 });

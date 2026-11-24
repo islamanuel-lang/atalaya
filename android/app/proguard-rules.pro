@@ -1,2 +1,2 @@
-# Atalaya
--keep class es.atalaya.app.** { *; }
+# SemenCheck
+-keep class es.semencheck.app.** { *; }

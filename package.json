@@ -1,5 +1,5 @@
 {
-  "name": "atalaya-shared",
+  "name": "semencheck-shared",
   "private": true,
   "type": "module",
   "description": "Dependencias del núcleo compartido entre API y Worker",

@@ -6,7 +6,7 @@ on:
     paths:
       - "web/**"
       - "content/**"
-      - "ios/Atalaya/Resources/bip39-english.txt"
+      - "ios/SemenCheck/Resources/bip39-english.txt"
   workflow_dispatch:
 
 permissions:

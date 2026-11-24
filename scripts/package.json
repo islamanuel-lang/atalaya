@@ -1,5 +1,5 @@
 {
-  "name": "atalaya-icons",
+  "name": "semencheck-icons",
   "private": true,
   "type": "module",
   "scripts": { "icons": "node make-icons.mjs" },

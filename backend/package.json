@@ -1,8 +1,8 @@
 {
-  "name": "atalaya-api",
+  "name": "semencheck-api",
   "private": true,
   "type": "module",
-  "description": "API de auditoría Atalaya",
+  "description": "API de auditoría SemenCheck",
   "engines": { "node": ">=20" },
   "scripts": {
     "start": "node src/server.js",
