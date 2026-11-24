@@ -3,6 +3,7 @@ title: Quiénes somos
 description: Equipo detrás de SemenCheck. Por qué existe, cómo se financia y qué no hace.
 slug: quien-esta-detras
 kind: page
+tag: Equipo
 ---
 
 # Quiénes somos
