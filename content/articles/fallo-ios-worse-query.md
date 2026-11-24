@@ -1,12 +1,12 @@
 ---
-title: El fallo de iOS que lee las carpetas de otras apps
+title: La vulnerabilidad de iOS que pone tus datos en riesgo
 description: Qué es worse_query, qué versiones afecta, qué permite y cómo comprobar si tu wallet está expuesta.
 date: 2026-11-23
 slug: fallo-ios-worse-query
 tag: Vulnerabilidades
 ---
 
-# El fallo de iOS que lee las carpetas de otras apps
+# La vulnerabilidad de iOS que pone tus datos en riesgo
 
 El 8 de noviembre de 2026 se publicó `worse_query`, una prueba de concepto que
 rompe el aislamiento entre apps en iOS 26 y 27. No es un jailbreak ni necesita

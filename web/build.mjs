@@ -129,7 +129,6 @@ for (const name of fs.readdirSync(path.join(CONTENT, 'articles'))) {
     description: data.description || excerpt,
     body: `<article class="prose">
       <p class="eyebrow">${esc((data.tag || '').toUpperCase())} · ${esc(data.date || '')}</p>
-      <h1>${esc(data.title)}</h1>
       ${marked.parse(body)}
       <div class="callout">
         <p>Comprueba tu propia exposición en menos de un minuto.</p>
