@@ -40,7 +40,7 @@ en la beta 2 de 27.3.
 ## Por qué importa para cripto
 
 Porque mucha gente guarda la frase semilla fuera de la wallet: una captura en el
-carrete, un `.txt` en Archivos, una nota copiada. Ahí no hay Keychain que valga:
+galería, un `.txt` en Archivos, una nota copiada. Ahí no hay Keychain que valga:
 son ficheros planos que el escape sí lee.
 
 Las wallets que guardan la semilla en el llavero del sistema (la mayoría) no

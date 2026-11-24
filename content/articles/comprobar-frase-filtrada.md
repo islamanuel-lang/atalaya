@@ -37,7 +37,7 @@ nada.
 ## Qué mirar en el resultado
 
 - **Coincidencia de dirección**: la que muestra debe ser la tuya.
-- **Origen del hallazgo**: "filtración conocida", "captura en tu carrete",
+- **Origen del hallazgo**: "filtración conocida", "captura en tu galería",
   "fichero en X app". Sin origen, es humo.
 - **Fecha**: una filtración de hace dos años sigue siendo válida.
 

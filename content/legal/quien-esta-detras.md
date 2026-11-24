@@ -1,15 +1,19 @@
 ---
-title: Quién está detrás de SemenCheck
-description: Proyecto independiente de seguridad para iPhone. Quién lo lleva, por qué existe, cómo se financia y qué no hace.
+title: Quiénes somos
+description: Equipo detrás de SemenCheck. Por qué existe, cómo se financia y qué no hace.
 slug: quien-esta-detras
 kind: page
 ---
 
-# Quién está detrás de SemenCheck
+# Quiénes somos
 
-SemenCheck es un proyecto independiente de seguridad para iPhone, llevado por una
-sola persona con nombre público —puedes llamarme **force**— que lleva años en el
-mundillo de las wallets y la seguridad móvil.
+Somos un equipo pequeño con larga trayectoria construyendo soluciones de
+software, buena parte en seguridad y producto. Firmamos con nombre público:
+**force**.
+
+SemenCheck es un proyecto independiente de seguridad para iPhone. No somos una
+empresa grande y no vendemos humo: enseñamos lo que encontramos y explicamos qué
+hacer.
 
 ## Por qué existe
 
@@ -20,8 +24,9 @@ poner remedio.
 
 ## Cómo gana dinero
 
-Ahora mismo, con enlaces de afiliado a exchanges y, más adelante, con una versión
-premium de vigilancia continua. El informe no se vende y no hay registro.
+Ahora mismo, con enlaces de afiliado a exchanges. Más adelante, con la
+[defensa en línea](/defensa), un servicio premium de vigilancia continua. El
+informe puntual no se vende y no hay registro.
 
 ## Cómo trata tu frase
 

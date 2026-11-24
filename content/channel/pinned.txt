@@ -1,7 +1,7 @@
 🛡️ SemenCheck revisa en 60 segundos si tu frase semilla está expuesta.
 
 Un fallo de iOS permite que una app lea las carpetas de otras. SemenCheck lo usa
-para mirar lo que tú no ves: capturas con la semilla en el carrete, copias en
+para mirar lo que tú no ves: capturas con la semilla en la galería, copias en
 archivos, wallets con la frase guardada.
 
 · Sin registro

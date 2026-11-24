@@ -22,7 +22,7 @@ la auditoría en línea sigue, pero ya no lee carpetas ajenas.
 
 **¿Y en Android?**
 La app de Android hace la parte de comprobación y revisa las capturas del
-carrete. No tiene el escape de iOS porque Android no lo necesita igual.
+galería. No tiene el escape de iOS porque Android no lo necesita igual.
 
 **¿Pedís permisos?**
 En iPhone, ninguno. En Android, solo acceso a fotos para buscar capturas.

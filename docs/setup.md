@@ -96,7 +96,7 @@ gradle assembleDebug        # o ./gradlew si generas wrapper
 
 Instala el APK, concede acceso a fotos cuando lo pida y configura la API en la
 última tarjeta de la pantalla. El MVP Android no tiene OCR ni escape: hace la
-comprobación en línea y sube capturas del carrete.
+comprobación en línea y sube capturas de la galería.
 
 ## TestFlight
 

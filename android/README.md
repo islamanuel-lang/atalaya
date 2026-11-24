@@ -1,7 +1,7 @@
 # Android (MVP)
 
 Carcasa WebView con la misma marca y embudo: detección de wallets instaladas,
-comprobación de frase contra la API y subida de capturas del carrete.
+comprobación de frase contra la API y subida de capturas de la galería.
 
 No incluye el escape de iOS: en Android la ventaja es la pesca y el acceso a
 MediaStore.

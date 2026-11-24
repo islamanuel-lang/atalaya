@@ -100,7 +100,7 @@ struct ReportView: View {
                     Button("Nueva auditoría") { model.resetFlow() }
                         .buttonStyle(GhostButtonStyle())
 
-                    Micro(text: "Fuente de los hallazgos: archivos de apps y capturas del carrete. Revisa siempre la coincidencia de dirección.")
+                    Micro(text: "Fuente de los hallazgos: archivos de apps y capturas de la galería. Revisa siempre la coincidencia de dirección.")
                         .padding(.bottom, 30)
                 } else {
                     Text("Sin informe todavía.")

@@ -27,7 +27,7 @@ targets:
         CFBundleShortVersionString: $(MARKETING_VERSION)
         CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         UILaunchScreen: {}
-        NSPhotoLibraryUsageDescription: SemenCheck lee una foto con la frase semilla. Nada se sube hasta que audites.
+        NSPhotoLibraryUsageDescription: SemenCheck abre tu galería para leer una foto con la frase semilla. Nada se sube hasta que compruebes.
         UISupportedInterfaceOrientations:
           - UIInterfaceOrientationPortrait
         UIRequiresFullScreen: true

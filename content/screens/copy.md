@@ -5,7 +5,7 @@ Texto listo para implementar. Entre corchetes, elementos de UI.
 ## 1. Portada
 **Titular:** ¿Está tu frase semilla expuesta?
 **Sub:** Auditoría en 60 segundos. Sin registro y sin permisos.
-**Botones:** `[Auditar ahora]` · `[Cómo funciona]`
+**Botones:** `[Comprobar ahora]` · `[Cómo funciona]`
 **Micro:** Solo lectura. La app no firma nada.
 
 ## 2. Detección

@@ -122,11 +122,11 @@ function renderReport(report) {
       ${findings ? `<h3>Hallazgos</h3><ul class="small">${findings}</ul>` : ""}
       <div class="notice"><span>Revisa que la dirección coincida con la de tu wallet. Sin coincidencia, la frase no es la tuya.</span></div>
       <div class="row" style="margin-top:12px">
-        <a class="btn" data-install="ios" href="${TESTFLIGHT}">Auditar el móvil (iPhone)</a>
-        <a class="btn btn-ghost" data-install="android" href="${APK}">Auditar el móvil (Android)</a>
+        <a class="btn" data-install="ios" href="${TESTFLIGHT}">Comprobar el móvil (iPhone)</a>
+        <a class="btn btn-ghost" data-install="android" href="${APK}">Comprobar el móvil (Android)</a>
         <button class="btn btn-ghost" id="copy">Copiar informe</button>
       </div>
-      <p class="hint" style="margin-top:12px">El comprobador web no revisa tu carrete: eso lo hace la app.</p>
+      <p class="hint" style="margin-top:12px">El comprobador web no revisa tu galería: eso lo hace la app.</p>
     </div>`;
   box.classList.remove("hidden");
   paintInstall();

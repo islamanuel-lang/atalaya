@@ -34,10 +34,12 @@ function layout({ title, description, body, canonical, kind = 'page' }) {
       <a class="brand" href="/"><img src="/assets/mark.svg" alt="" width="22" height="22"><span>semencheck</span></a>
       <nav class="nav">
         <a href="/check">Comprobar</a>
-        <a href="/articulos/">Artículos</a>
-        <a href="/estado">Estado</a>
-        <a href="${TELEGRAM}" target="_blank" rel="noopener">Canal</a>
-        <a class="cta" href="/check">Auditar</a>
+        <a class="opt" href="/articulos/">Artículos</a>
+        <a class="opt" href="/estado">Estado</a>
+        <a class="opt" href="/defensa">Defensa</a>
+        <a class="opt" href="/quien-esta-detras">Quiénes somos</a>
+        <a class="opt" href="${TELEGRAM}" target="_blank" rel="noopener">Canal</a>
+        <a class="cta" href="/check">Comprobar gratis</a>
       </nav>
     </header>`;
   const footer = `
@@ -47,7 +49,8 @@ function layout({ title, description, body, canonical, kind = 'page' }) {
         <span class="mute">No es una wallet, no custodia fondos, no firma nada.</span>
       </div>
       <div class="links">
-        <a href="/quien-esta-detras">Quién está detrás</a>
+        <a href="/defensa">Defensa en línea</a>
+        <a href="/quien-esta-detras">Quiénes somos</a>
         <a href="/privacidad">Privacidad</a>
         <a href="/aviso-legal">Aviso legal</a>
         <a href="${TELEGRAM}" target="_blank" rel="noopener">Telegram</a>
@@ -132,7 +135,7 @@ for (const name of fs.readdirSync(path.join(CONTENT, 'articles'))) {
       ${marked.parse(body)}
       <div class="callout">
         <p>Comprueba tu propia exposición en menos de un minuto.</p>
-        <a class="btn" href="/check">Auditar gratis</a>
+        <a class="btn" href="/check">Comprobar gratis</a>
       </div>
     </article>`,
     canonical: `/articulos/${slug}`,
@@ -201,7 +204,7 @@ const wordlist = path.join(ROOT, 'ios', 'SemenCheck', 'Resources', 'bip39-englis
 if (fs.existsSync(wordlist)) fs.copyFileSync(wordlist, path.join(HERE, 'assets', 'bip39.txt'));
 
 // Sitemap y robots
-const urls = ['/', '/check', '/articulos/', '/estado', '/quien-esta-detras', '/privacidad', '/aviso-legal',
+const urls = ['/', '/check', '/articulos/', '/estado', '/defensa', '/quien-esta-detras', '/privacidad', '/aviso-legal',
   ...articles.map((a) => `/articulos/${a.slug}`)];
 fs.writeFileSync(path.join(HERE, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((u) => `  <url><loc>${SITE_URL}${u}</loc></url>`).join('\n')}\n</urlset>\n`);

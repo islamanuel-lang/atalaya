@@ -8,7 +8,7 @@ fs.rmSync(dist, { recursive: true, force: true });
 fs.mkdirSync(dist, { recursive: true });
 
 const files = ['404.html', 'styles.css', 'app.js', 'sitemap.xml', 'robots.txt', '_headers', '_redirects', 'index.html', 'semencheck.apk'];
-const dirs = ['check', 'articulos', 'estado', 'privacidad', 'quien-esta-detras', 'aviso-legal', 'assets'];
+const dirs = ['check', 'articulos', 'estado', 'defensa', 'privacidad', 'quien-esta-detras', 'aviso-legal', 'assets'];
 
 for (const file of files) {
   const from = path.join(root, file);

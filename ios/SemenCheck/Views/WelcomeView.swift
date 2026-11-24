@@ -28,7 +28,7 @@ struct WelcomeView: View {
                     }
                 }
 
-                Button("Auditar ahora") { model.begin() }
+                Button("Comprobar ahora") { model.begin() }
                     .buttonStyle(PrimaryButtonStyle())
 
                 Button("Cómo funciona") { showHow = true }

@@ -101,6 +101,7 @@ p { margin: 0 0 14px; }
   font-weight: 600;
 }
 .nav .cta:hover { color: var(--ink); }
+@media (max-width: 720px) { .nav { gap: 12px; } .nav .opt { display: none; } }
 
 /* Botones */
 .btn {

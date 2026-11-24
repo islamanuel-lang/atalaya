@@ -11,7 +11,7 @@ tag: Guías
 Casi nadie escribe la semilla en un papel y ya está. La vida real deja copias
 por todas partes, y esas copias son las que un infostealer busca. Repásalas hoy.
 
-## 1. El carrete
+## 1. La galería
 
 La captura de la pantalla de las 12 palabras, hecha al crear la wallet aunque
 la app dijera "no hagas capturas", sigue ahí meses después. No la borres sin
@@ -49,7 +49,7 @@ mensaje ya no esté a la vista.
 2. Escríbela en papel (o metálica) y guárdala fuera del móvil.
 3. Ahora sí: borra capturas, nota, `.txt` y mensajes.
 4. Vacía la papelera de Fotos y de Archivos; borrar no siempre es borrar.
-5. Comprueba el carrete semanas después: reaparecen copias en "Recientes".
+5. Comprueba la galería semanas después: reaparecen copias en "Recientes".
 
 ## Y la comprobación
 
